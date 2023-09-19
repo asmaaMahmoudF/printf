@@ -10,7 +10,6 @@ int _printf(const char * const format, ...)
 convert_match m[] = {
 {"%s", printf_string}, {"%c", printf_char},
 {"%%", printf_37},
-{"%i", printf_int}, {"%d", printf_dec}
 };
 va_list formatptr;
 int i = 0, j, len = 0;
@@ -26,6 +25,7 @@ j = 13;
 while (j >= 0)
 {
 if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+{
 len += m[j].f(formatptr);
 i = i + 2;
 goto Here;
