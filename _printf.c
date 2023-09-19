@@ -1,5 +1,7 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
 /**
  * _printf - is a function that selects the correct function to print
  * @format: indentifier to look for.

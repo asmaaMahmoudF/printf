@@ -1,8 +1,7 @@
 #include "main.h"
-<<<<<<< HEAD
-
-=======
->>>>>>> 99d0310329204be56d458dc69bf92f6ef5c40bd9
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
 /**
 * printf_string - printf string
 * @val: input

@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
 /**
  * printf_37 - prints the char 37.
  * Return: 1.
