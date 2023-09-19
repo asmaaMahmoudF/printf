@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
 * printf_string - printf string
 * @val: input
