@@ -22,7 +22,7 @@ int (*f)();
 convert_match;
 
 int _printf(const char *format, ...);
-int _putchar(char chnclude <unistd.h>);
+int _putchar(char ch);
 int _strlen(char *s);
 int printf_string(va_list val);
 int printf_char(va_list val);
