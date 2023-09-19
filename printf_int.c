@@ -1,4 +1,4 @@
-#include "main_printf.h"
+#include "mai.h"
 /**
  * printf_int - prints integer
  * @args: argument to print

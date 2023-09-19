@@ -1,4 +1,4 @@
-#include "main_printf.h"
+#include "main.h"
 /**
 * printf_char -  print character
 * @val: input
