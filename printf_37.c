@@ -4,6 +4,7 @@
 #include <stdarg.h>
 /**
  * printf_37 - prints the char 37.
+ * * @val: input
  * Return: 1.
  */
 int printf_37(va_list val)
