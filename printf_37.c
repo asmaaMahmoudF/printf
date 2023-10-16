@@ -6,8 +6,8 @@
  * printf_37 - prints the char 37.
  * Return: 1.
  */
-int printf_37(void)
+int printf_37(va_list val)
 {
-	_putchar(37);
+	_putchar('%');
 	return (1);
 }

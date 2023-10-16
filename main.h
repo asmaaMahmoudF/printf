@@ -16,16 +16,14 @@
 typedef struct format
 {
 char *id;
-int (*f)();
+int (*f)(va_list);
 
-}
-convert_match;
+} convert_match;
 
 int _printf(const char *format, ...);
 int _putchar(char ch);
 int _strlen(char *s);
 int printf_string(va_list val);
 int printf_char(va_list val);
-int printf_dec(va_list args);
-int printf_37(void);
+int printf_37(va_list val);
 #endif
