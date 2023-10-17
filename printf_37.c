@@ -3,12 +3,13 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * printf_37 - prints the char 37.
+ * print_mod - prints the char 37.
  * * @val: input
  * Return: 1.
  */
-int printf_37(va_list val)
+int print_mod(va_list val)
 {
+	(void)val;
 	_putchar('%');
 	return (1);
 }

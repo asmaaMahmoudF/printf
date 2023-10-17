@@ -1,44 +1,44 @@
 #include "main.h"
-#include <stdarg.h>
-
 /**
- * _printf - is a function that selects the correct function to print.
- * @format: identifier to look for.
- * Return: the length of the string.
+ * _printf - print f function
+ * @format: the string will be printed
+ * Return: number of digits printed
  */
-
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
-	convert_match m[] = {
-		{"%s", printf_string}, {"%c", printf_char},
-		{"%%", printf_37}
-	};
-
-	va_list args;
-	int i = 0, j, len = 0;
-
-	va_start(args, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	int j, i = 0, len = 0;
+	va_list ap;
+	convert_match fun[] = {{'c', print_char}, {'s', print_string},
+		{'%', print_37}, {'i', print_int},
+		{'d', print_int}};
+	va_start(ap, format);
+	if ((!format) || (format[0] == '%' && !format[1]))
 		return (-1);
-
-Here:
-	while (format[i] != '\0')
+	while (format[i])
 	{
-		j = 13;
-		while (j >= 0)
+		if (format[i] == '%')
 		{
-			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			if (format[i + 1] == '\0')
+				return (-1);
+			j = 0;
+			while (j < 5)
 			{
-				len += m[j].f(args);
-				i = i + 2;
-				goto Here;
+				if (format[i + 1] == fun[j].ch)
+				{
+					len += fun[j].f(ap);
+					i += 2;
+					break;
+				}
+				j++;
 			}
-			j--;
 		}
-		_putchar(format[i]);
-		len++;
-		i++;
+		else
+		{
+			_putchar(format[i]);
+			len++;
+			i++;
+		}
 	}
-	va_end(args);
+	va_end(ap);
 	return (len);
 }
