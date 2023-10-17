@@ -8,8 +8,8 @@ int _printf(const char *format, ...)
 {
 	int j, i = 0, len = 0;
 	va_list ap;
-	convert_match fun[] = {{'c', print_char}, {'s', print_string},
-		{'%', print_37}, {'i', print_int},
+	convert_match fun[] = {{'c', printf_char}, {'s', printf_string},
+		{'%', print_mod}, {'i', print_int},
 		{'d', print_int}};
 	va_start(ap, format);
 	if ((!format) || (format[0] == '%' && !format[1]))
