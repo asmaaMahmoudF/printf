@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 			if (!match)
 			{
 				_putchar('%');
-				_putchar(format[i]);
+				_putchar(format[i + 1]);
 				len += 2, i += 2;
 			}
 		}
