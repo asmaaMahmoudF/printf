@@ -26,6 +26,6 @@ int printf_char(va_list ap);
 int print_mod(va_list ap);
 int printf_int(va_list ap);
 int printf_string(va_list ap);
-
+int printf_unsigned(va_list args);
 #endif
 

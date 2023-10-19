@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	convert_match fun[] = {{'c', printf_char}, {'s', printf_string},
 		{'%', print_mod}, {'i', printf_int},
-		{'d', printf_int}};
+		{'d', printf_int}, {'b', printf_unsigned}};
 	va_start(ap, format);
 	if ((!format) || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0')
 				return (-1);
 			j = 0;
-			while (j < 5)
+			while (j < 6)
 			{
 				if (format[i + 1] == fun[j].ch)
 				{
