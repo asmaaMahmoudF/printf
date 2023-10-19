@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{'%', print_mod}, {'i', printf_int},
 		{'d', printf_int}, {'b', printf_unsigned}};
 	va_start(ap, format);
-	if ((!format) || (format[0] == '%' && !format[1]))
+	if ((!format) || (format[0] == '%' && !format[1]) || format[i + 1] == '\0')
 		return (-1);
 	while (format[i] && format)
 	{
