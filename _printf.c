@@ -6,12 +6,11 @@
  */
 int _printf(const char *format, ...)
 {
-	int j, i = 0, len = 0;
-	int match = 0;
+	int j, i = 0, len = 0, match = 0;
 	va_list ap;
 	convert_match fun[] = {{'c', printf_char}, {'s', printf_string},
-		{'%', print_mod}, {'i', printf_int},
-		{'d', printf_int}, {'b', printf_unsigned}};
+	{'%', print_mod}, {'i', printf_int}, {'d', printf_int},
+	{'b', printf_unsigned}};
 	va_start(ap, format);
 	if ((!format) || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -21,15 +20,13 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-		    j = 0;
-			match = 0;
+		    j = 0, match = 0;
 			while (j < 6)
 			{
 				if (format[i + 1] == fun[j].ch)
 				{
 					len += fun[j].f(ap);
-					i += 2;
-					match = 1;
+					i += 2, match = 1;
 					break;
 				}
 				j++;
@@ -38,15 +35,13 @@ int _printf(const char *format, ...)
 			{
 				_putchar('%');
 				_putchar(format[i]);
-				len += 2;
-				i += 2;
+				len += 2, i += 2;
 			}
 		}
 		else
 		{
 			_putchar(format[i]);
-			len++;
-			i++;
+			len++, i++;
 		}
 	}
 	va_end(ap);
