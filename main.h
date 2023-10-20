@@ -28,6 +28,8 @@ int printf_int(va_list ap);
 int printf_string(va_list ap);
 int printf_bin(va_list val);
 int printf_unsigned(va_list args);
-
+int HEXA(va_list val);
+int hexa(va_list val);
+int octal(va_list val);
 #endif
 
