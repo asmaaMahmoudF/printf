@@ -27,7 +27,7 @@ int print_ex_str(va_list ap)
 				_putchar('0');
 				len++;
 			}
-			print_Hexadecimal(check, &len);
+			print_hexadecimal_ptr(check, &len);
 		}
 		else
 		{
@@ -37,3 +37,4 @@ int print_ex_str(va_list ap)
 	}
 	return (len);
 }
+
