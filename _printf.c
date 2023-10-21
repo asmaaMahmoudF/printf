@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0')
 				return (-1);
 		    j = 0, match = 0;
-			while (j < 6)
+			while (j < 10)
 			{
 				if (format[i + 1] == fun[j].ch)
 				{
