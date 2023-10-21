@@ -6,9 +6,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int j, i = 0, len = 0, match = 0, buff_ind = 0;
+	int j, i = 0, len = 0, match = 0;
 	va_list ap;
-	char buffer[BUFF_SIZE];
 	convert_match fun[] = {{'c', printf_char}, {'s', printf_string},
 	{'%', print_mod}, {'i', printf_int}, {'d', printf_int}, {'X', HEXA},
 	{'b', printf_bin}, {'u', printf_unsigned}, {'o', octal}, {'x', hexa}};
@@ -41,10 +40,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			buffer[buff_ind++] = format[i];
-			if (buff_ind == BUFF_SIZE)
-				print_buffer(buffer, &buff_ind);
-			len++;
+			_putchar(format[i]);
+			len++, i++;
 		}
 	}
 	va_end(ap);
