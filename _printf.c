@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 	int j, i = 0, len = 0, match = 0;
 	va_list ap;
 	convert_match fun[] = {{'c', printf_char}, {'s', printf_string},
-{'p', print_address},
+{'p', print_address}, {'S', print_ex_str},
 	{'%', print_mod}, {'i', printf_int}, {'d', printf_int}, {'X', HEXA},
 	{'b', printf_bin}, {'u', printf_unsigned}, {'o', octal}, {'x', hexa}};
 	va_start(ap, format);
@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0')
 				return (-1);
 			match = 0;
-			for (j = 0; j < 11; j++)
+			for (j = 0; j < 12; j++)
 			{
 				if (format[i + 1] == fun[j].ch)
 				{
