@@ -2,7 +2,7 @@
 
 
 /**
- * printf_unsigned - print unsigned interger 
+ * printf_unsigned - print unsigned interger
  * @args: input
  * Return: nouber of chars
  */
