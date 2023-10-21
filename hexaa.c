@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * hexa - prints an hexgecimal number.
- * @val: arguments.
- * Return: counter.
+ * hexa - printf hexa function
+ * @val: input.
+ * Return: print chars.
  */
 int hexa(va_list val)
 {

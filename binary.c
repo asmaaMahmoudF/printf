@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * printf_bin - prints a binary number.
- * @vals: arguments.
+ * printf_bin - priutns binary.
+ * @vals: input.
  * Return: 1.
  */
 int printf_bin(va_list vals)

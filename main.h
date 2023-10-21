@@ -6,7 +6,7 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-
+#define BUFF_SIZE 1024
 /**
  * struct format - match the conversion specifiers for printf
  * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
@@ -34,5 +34,6 @@ int hexa(va_list val);
 int octal(va_list val);
 
 int printf_unsigned(va_list args);
+void print_buffer(char buffer[], int *buff_ind);
 #endif
 

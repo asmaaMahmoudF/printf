@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * HEXA - prints an hexgecimal number.
- * @val: arguments.
- * Return: counter.
+ * HEXA - print hexa no.
+ * @val: input .
+ * Return: no of chars.
  */
 int HEXA(va_list val)
 {
