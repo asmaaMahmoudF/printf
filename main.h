@@ -26,6 +26,7 @@ int printf_char(va_list ap);
 int print_mod(va_list ap);
 int printf_int(va_list ap);
 int printf_string(va_list ap);
+
 int printf_bin(va_list val);
 
 int HEXA(va_list val);
