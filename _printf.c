@@ -9,6 +9,7 @@ int _printf(const char *format, ...)
 	int j, i = 0, len = 0, match = 0;
 	va_list ap;
 	convert_match fun[] = {{'c', printf_char}, {'s', printf_string},
+{'p', print_address},
 	{'%', print_mod}, {'i', printf_int}, {'d', printf_int}, {'X', HEXA},
 	{'b', printf_bin}, {'u', printf_unsigned}, {'o', octal}, {'x', hexa}};
 	va_start(ap, format);
@@ -20,8 +21,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-		    j = 0, match = 0;
-			while (j < 10)
+			match = 0;
+			for (j = 0; j < 11; j++)
 			{
 				if (format[i + 1] == fun[j].ch)
 				{
@@ -29,7 +30,6 @@ int _printf(const char *format, ...)
 					i += 2, match = 1;
 					break;
 				}
-				j++;
 			}
 			if (!match)
 			{
@@ -47,4 +47,3 @@ int _printf(const char *format, ...)
 	va_end(ap);
 	return (len);
 }
-

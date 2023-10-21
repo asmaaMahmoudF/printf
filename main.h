@@ -34,6 +34,9 @@ int hexa(va_list val);
 int octal(va_list val);
 
 int printf_unsigned(va_list args);
-void print_buffer(char buffer[], int *buff_ind);
+
+int print_address(va_list ap);
+void print_hexadecimal_ptr(unsigned long int num, int *p);
+int print_hex_ptr(va_list ap);
 #endif
 
